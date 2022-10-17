@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">aparat</string>
+    <string name="bttn_1">Zdjęcie !!!</string>
+    <string name="autor">Przemyłsaw Tomaszewski 4pr</string>
 </resources>
