@@ -3,6 +3,7 @@ package com.example.aparat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.Manifest;
 import android.content.Intent;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     public void EnableRuntimePermission(){
         if (ActivityCompat.shouldShowRequestPermissionRationale(MainActivity.this,
                 Manifest.permission.CAMERA)) {
-            Toast.makeText(MainActivity.this,"CAMERA permission allows us to Access CAMERA app",     Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this,"Dostęp do kamery jest potrzebny aby aplikacja funkcjonowała poprawnie",     Toast.LENGTH_LONG).show();
         } else {
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{
                     Manifest.permission.CAMERA}, RequestPermissionCode);
@@ -61,5 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
         }
+    }
+
+    public void rgb(View view) {
+        imageView = findViewById(R.id.imageView);
+        imageView.setColorFilter(Color.argb(155, 255, 155, 155));
+
     }
 }
